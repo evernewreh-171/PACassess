@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PAC 評估表單入口｜營新醫院</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #f3f6f5;
+    --surface: #ffffff;
+    --ink: #1d2b2a;
+    --muted: #5d6e6c;
+    --line: #d5dedc;
+    --pt: #1f6f8b;
+    --ot: #b4572b;
+    --nu: #3d7a3a;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #141b1b;
+      --surface: #1c2625;
+      --ink: #e6eeec;
+      --muted: #9fb0ad;
+      --line: #2e3c3b;
+      --pt: #6cc0dc;
+      --ot: #f0a077;
+      --nu: #94d28f;
+    }
+  }
+  * { box-sizing: border-box; }
+  html { scroll-padding-top: 1rem; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", system-ui, sans-serif;
+    line-height: 1.7;
+  }
+  .wrap { max-width: 1040px; margin: 0 auto; padding: 2.5rem 1.25rem 3rem; }
+  header { margin-bottom: 2rem; }
+  header p.org { margin: 0 0 .25rem; color: var(--muted); font-size: .95rem; }
+  h1 { margin: 0 0 .5rem; font-size: clamp(1.7rem, 4vw, 2.4rem); font-weight: 700; letter-spacing: .02em; }
+  header p.lead { margin: 0; color: var(--muted); max-width: 40em; }
+
+  nav.jump { display: flex; flex-wrap: wrap; gap: .5rem; margin: 1.5rem 0 0; }
+  nav.jump a {
+    padding: .35rem 1rem;
+    border: 1.5px solid currentColor;
+    border-radius: 999px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: .95rem;
+  }
+  nav.jump a.pt { color: var(--pt); }
+  nav.jump a.ot { color: var(--ot); }
+  nav.jump a.nu { color: var(--nu); }
+  nav.jump a:hover { background: color-mix(in srgb, currentColor 12%, transparent); }
+
+  .roles { display: grid; gap: 1.5rem; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); align-items: start; }
+  section.role {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-top: 6px solid var(--accent);
+    border-radius: 6px;
+    padding: 1.25rem 1.25rem 1.5rem;
+  }
+  section.pt { --accent: var(--pt); }
+  section.ot { --accent: var(--ot); }
+  section.nu { --accent: var(--nu); }
+  section.role h2 { margin: 0; font-size: 1.35rem; color: var(--accent); }
+  section.role .sub { margin: .1rem 0 1rem; color: var(--muted); font-size: .9rem; }
+
+  ul { list-style: none; margin: 0; padding: 0; display: grid; gap: .6rem; }
+  a.form {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: .15rem .85rem;
+    align-items: center;
+    padding: .8rem .9rem;
+    border: 1px solid var(--line);
+    border-radius: 4px;
+    color: inherit;
+    text-decoration: none;
+    background: var(--bg);
+  }
+  a.form:hover, a.form:focus-visible {
+    border-color: var(--accent);
+    outline: 2px solid var(--accent);
+    outline-offset: 1px;
+  }
+  a.form .code {
+    grid-row: span 2;
+    min-width: 4.6rem;
+    text-align: center;
+    padding: .3rem .4rem;
+    border-radius: 4px;
+    background: var(--accent);
+    color: var(--surface);
+    font-weight: 700;
+    font-size: .95rem;
+  }
+  a.form .name { font-weight: 500; }
+  a.form .en { color: var(--muted); font-size: .85rem; }
+
+  footer { margin-top: 2rem; color: var(--muted); font-size: .88rem; }
+  footer p { margin: .2rem 0; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <p class="org">營新醫院</p>
+    <h1>PAC 評估表單入口</h1>
+    <p class="lead">請找到自己的專業，點選下方表單開啟填寫。每次評估請依個案各填一份。</p>
+    <nav class="jump" aria-label="快速跳到專業">
+      <a class="pt" href="#pt">物理治療（PT）</a>
+      <a class="ot" href="#ot">職能治療（OT）</a>
+      <a class="nu" href="#nu">營養師</a>
+    </nav>
+  </header>
+
+  <main class="roles">
+
+    <section class="role pt" id="pt">
+      <h2>物理治療（PT）</h2>
+      <p class="sub">共 3 份表單</p>
+      <ul>
+        <li><a class="form" href="https://forms.cloud.microsoft/r/R67Z7wCNx4" target="_blank" rel="noopener">
+          <span class="code">PAC-1</span>
+          <span class="name">整體功能狀態</span>
+          <span class="en">Modified Rankin Scale（MRS）</span></a></li>
+        <li><a class="form" href="https://forms.cloud.microsoft/r/yQ9A9bQYT5" target="_blank" rel="noopener">
+          <span class="code">PAC-2</span>
+          <span class="name">日常生活功能</span>
+          <span class="en">巴氏量表 Barthel Index</span></a></li>
+        <li><a class="form" href="https://forms.cloud.microsoft/r/BLYFSXcgsi" target="_blank" rel="noopener">
+          <span class="code">PAC-7</span>
+          <span class="name">姿勢控制、平衡功能</span>
+          <span class="en">伯格氏平衡量表 Berg Balance Scale</span></a></li>
+      </ul>
+    </section>
+
+    <section class="role ot" id="ot">
+      <h2>職能治療（OT）</h2>
+      <p class="sub">共 3 份表單</p>
+      <ul>
+        <li><a class="form" href="https://forms.cloud.microsoft/r/Bsmq8uN23Q" target="_blank" rel="noopener">
+          <span class="code">PAC-5</span>
+          <span class="name">健康相關生活品質</span>
+          <span class="en">EQ-5D</span></a></li>
+        <li><a class="form" href="https://forms.cloud.microsoft/r/MRkPRP1Ehm" target="_blank" rel="noopener">
+          <span class="code">PAC-6</span>
+          <span class="name">工具性日常生活功能</span>
+          <span class="en">Lawton-Brody IADL</span></a></li>
+        <li><a class="form" href="https://forms.cloud.microsoft/r/a2CUmqEfDX" target="_blank" rel="noopener">
+          <span class="code">PAC-10/11</span>
+          <span class="name">感覺運動功能／認知功能</span>
+          <span class="en">同一份表單填寫</span></a></li>
+      </ul>
+    </section>
+
+    <section class="role nu" id="nu">
+      <h2>營養師</h2>
+      <p class="sub">共 1 份表單</p>
+      <ul>
+        <li><a class="form" href="https://forms.cloud.microsoft/r/kmfhGmZhzE" target="_blank" rel="noopener">
+          <span class="code">PAC-3/4</span>
+          <span class="name">吞嚥及進食功能／營養評估</span>
+          <span class="en">FOIS／MNA 簡易版，同一份表單填寫</span></a></li>
+      </ul>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>表單會在新分頁開啟。填寫完成後直接送出即可。</p>
+    <p>連結無法開啟或填錯資料時，請聯絡資訊負責人員。</p>
+  </footer>
+</div>
+</body>
+</html>
