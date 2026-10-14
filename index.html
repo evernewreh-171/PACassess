@@ -17,6 +17,7 @@
     --pt: #1f6f8b;
     --ot: #b4572b;
     --nu: #3d7a3a;
+    --rp: #6b4fa0;
   }
   @media (prefers-color-scheme: dark) {
     :root {
@@ -28,6 +29,7 @@
       --pt: #6cc0dc;
       --ot: #f0a077;
       --nu: #94d28f;
+      --rp: #b8a3e6;
     }
   }
   * { box-sizing: border-box; }
@@ -57,6 +59,7 @@
   nav.jump a.pt { color: var(--pt); }
   nav.jump a.ot { color: var(--ot); }
   nav.jump a.nu { color: var(--nu); }
+  nav.jump a.rp { color: var(--rp); }
   nav.jump a:hover { background: color-mix(in srgb, currentColor 12%, transparent); }
 
   .roles { display: grid; gap: 1.5rem; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); align-items: start; }
@@ -70,6 +73,7 @@
   section.pt { --accent: var(--pt); }
   section.ot { --accent: var(--ot); }
   section.nu { --accent: var(--nu); }
+  section.rp { --accent: var(--rp); }
   section.role h2 { margin: 0; font-size: 1.35rem; color: var(--accent); }
   section.role .sub { margin: .1rem 0 1rem; color: var(--muted); font-size: .9rem; }
 
@@ -114,11 +118,12 @@
   <header>
     <p class="org">營新醫院</p>
     <h1>PAC 評估表單入口</h1>
-    <p class="lead">請找到自己的專業，點選下方表單開啟填寫。每次評估請依個案各填一份。個案姓名為選填，病歷號一定要填。</p>
+    <p class="lead">請找到自己的專業，點選下方表單開啟填寫。每次評估請依個案各填一份。需要報告書時，請至「產出報告書」。</p>
     <nav class="jump" aria-label="快速跳到專業">
       <a class="pt" href="#pt">物理治療（PT）</a>
       <a class="ot" href="#ot">職能治療（OT）</a>
       <a class="nu" href="#nu">營養師</a>
+      <a class="rp" href="#report">產出報告書</a>
     </nav>
   </header>
 
@@ -173,11 +178,34 @@
       </ul>
     </section>
 
+    <section class="role rp" id="report">
+      <h2>產出評估報告書</h2>
+      <p class="sub">依階段選擇，共 4 種</p>
+      <ul>
+        <li><a class="form" href="https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=giDqOckG1EGTf3Yjg953mJ8QM4m-j2tAmewCwQcZVXZUMFg1WTYxSVZaWTJJOEszUkJVNkJROUJKUy4u&amp;r6e1433207bae43edbfee4c057ba358f2=%22%E5%88%9D%E6%AC%A1%22" target="_blank" rel="noopener">
+          <span class="code">初次</span>
+          <span class="name">初次評估報告書</span>
+          <span class="en">填個案編號後送出，PDF 自動產生</span></a></li>
+        <li><a class="form" href="https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=giDqOckG1EGTf3Yjg953mJ8QM4m-j2tAmewCwQcZVXZUMFg1WTYxSVZaWTJJOEszUkJVNkJROUJKUy4u&amp;r6e1433207bae43edbfee4c057ba358f2=%22%E6%9C%9F%E4%B8%AD-1%22" target="_blank" rel="noopener">
+          <span class="code">期中-1</span>
+          <span class="name">期中評估報告書（第1次）</span>
+          <span class="en">填個案編號後送出，PDF 自動產生</span></a></li>
+        <li><a class="form" href="https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=giDqOckG1EGTf3Yjg953mJ8QM4m-j2tAmewCwQcZVXZUMFg1WTYxSVZaWTJJOEszUkJVNkJROUJKUy4u&amp;r6e1433207bae43edbfee4c057ba358f2=%22%E6%9C%9F%E4%B8%AD-2%22" target="_blank" rel="noopener">
+          <span class="code">期中-2</span>
+          <span class="name">期中評估報告書（第2次）</span>
+          <span class="en">填個案編號後送出，PDF 自動產生</span></a></li>
+        <li><a class="form" href="https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=giDqOckG1EGTf3Yjg953mJ8QM4m-j2tAmewCwQcZVXZUMFg1WTYxSVZaWTJJOEszUkJVNkJROUJKUy4u&amp;r6e1433207bae43edbfee4c057ba358f2=%22%E7%B5%90%E6%A1%88%22" target="_blank" rel="noopener">
+          <span class="code">結案</span>
+          <span class="name">結案評估報告書</span>
+          <span class="en">填個案編號後送出，PDF 自動產生</span></a></li>
+      </ul>
+    </section>
+
   </main>
 
   <footer>
     <p>表單會在新分頁開啟。填寫完成後直接送出即可。</p>
-    <p>連結無法開啟或填錯資料時，請聯絡復健科詣紋主任171。</p>
+    <p>連結無法開啟或填錯資料時，請聯絡詣紋主任。</p>
   </footer>
 </div>
 </body>
